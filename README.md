@@ -3,5 +3,5 @@ most recent version will list midi system devices
 
 
 usage:
-run the script buildAndRun.sh
+run the script rebuildAndRun.sh
 
