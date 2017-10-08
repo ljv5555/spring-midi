@@ -4,16 +4,22 @@ import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+// import org.springframework.boot.SpringBootApplication;
+//import org.springframework.boot.SpringApplication;
 
-@SpringBootApplication
+
+@org.springframework.boot.autoconfigure.SpringBootApplication
 public class MidiApplication {
 
+	@org.springframework.context.annotation.Bean
+	public static String[] getParameters(){return new String[]{"--list-devices"};}
+
 	public static void main(String[] args) {
-		System.out.println("args.length="+args.length);
-		for(String arg : args){ System.out.println("arg: "+arg); }
-		//SpringApplication.run(MidiApplication.class, args);
-		new MidiApplication(args);
+	  System.out.println("args.length="+args.length);
+	  for(String arg : args){System.out.println("arg: "+arg);}
+	  org.springframework.boot.
+          SpringApplication.run(MidiApplication.class, args);
+		//new MidiApplication(args);
 	}
 	
 	
