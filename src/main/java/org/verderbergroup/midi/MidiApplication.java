@@ -32,6 +32,7 @@ public class MidiApplication {
 				MidiDevice md;
 				try {
 					md = MidiSystem.getMidiDevice(deviceInfo[i]);
+					
 					System.out.println("device: inputs="+md.getMaxReceivers()+" outputs="+md.getMaxTransmitters()+" ---- "+deviceInfo[i].getName()+"----"+deviceInfo[i].getDescription());
 					
 				} catch (MidiUnavailableException e) {
